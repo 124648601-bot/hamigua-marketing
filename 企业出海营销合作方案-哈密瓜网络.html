@@ -1,0 +1,1716 @@
+<!DOCTYPE html><html lang="zh-CN"><head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>广州哈蜜瓜网络科技有限公司 - 企业出海营销合作方案</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;600;700&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@10.6.1/dist/mermaid.min.js"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'serif': ['Noto Serif SC', 'serif'],
+                        'sans': ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: '#1e293b',
+                        secondary: '#475569',
+                        accent: '#3b82f6',
+                        neutral: '#f8fafc',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .hero-overlay {
+            background: linear-gradient(135deg, rgba(30, 41, 59, 0.95) 0%, rgba(71, 85, 105, 0.8) 100%);
+        }
+        
+        .bento-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 3rem;
+            align-items: start;
+        }
+        
+        @media (min-width: 1024px) {
+            .bento-grid {
+                grid-template-columns: 3fr 2fr;
+                align-items: center;
+            }
+        }
+        
+        .hero-title {
+            font-size: clamp(3rem, 6vw, 5rem);
+            line-height: 1.1;
+            font-style: italic;
+            font-weight: 700;
+        }
+        
+        .hero-company-card {
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: all 0.3s ease;
+        }
+        
+        .hero-company-card:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateY(-2px);
+        }
+        
+        .hero-highlight-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            transition: all 0.3s ease;
+        }
+        
+        .hero-highlight-card:hover {
+            background: rgba(255, 255, 255, 0.15);
+            transform: translateY(-3px);
+        }
+        
+        .hero-contact-card {
+            background: linear-gradient(135deg, rgba(59, 130, 246, 0.2), rgba(30, 64, 175, 0.3));
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        /* Canvas support for logo generation */
+        .logo-canvas {
+            border-radius: 15px;
+        }
+        
+        /* Enhanced spacing and typography */
+        .text-shadow-lg {
+            text-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+        
+        .backdrop-blur-lg {
+            backdrop-filter: blur(20px);
+        }
+        
+        /* Smooth animations */
+        .transition-all {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        /* Gradient text effect */
+        .gradient-text {
+            background: linear-gradient(135deg, #ffffff, #bfdbfe);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .toc-sidebar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 280px;
+            height: 100vh;
+            background: linear-gradient(180deg, #f8fafc 0%, #e2e8f0 100%);
+            border-right: 1px solid #e2e8f0;
+            z-index: 1000;
+            overflow-y: auto;
+            padding: 2rem 1.5rem;
+        }
+        
+        .main-content {
+            margin-left: 280px;
+            min-height: 100vh;
+        }
+        
+        .toc-link {
+            display: block;
+            padding: 0.5rem 0;
+            color: #475569;
+            text-decoration: none;
+            border-left: 3px solid transparent;
+            padding-left: 1rem;
+            transition: all 0.3s ease;
+            font-size: 0.9rem;
+        }
+        
+        .toc-link:hover, .toc-link.active {
+            color: #3b82f6;
+            border-left-color: #3b82f6;
+            background: rgba(59, 130, 246, 0.05);
+        }
+        
+        .section-padding {
+            padding: 4rem 3rem;
+        }
+        
+        .stage-card {
+            background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+            border: 1px solid #e2e8f0;
+            transition: all 0.3s ease;
+        }
+        
+        .stage-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+        
+        .platform-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .mermaid-container {
+            display: flex;
+            justify-content: center;
+            min-height: 300px;
+            max-height: 800px;
+            background: #ffffff;
+            border: 2px solid #e5e7eb;
+            border-radius: 12px;
+            padding: 30px;
+            margin: 30px 0;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .mermaid-container .mermaid {
+            width: 100%;
+            max-width: 100%;
+            height: 100%;
+            cursor: grab;
+            transition: transform 0.3s ease;
+            transform-origin: center center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            touch-action: none;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+
+        .mermaid-container .mermaid svg {
+            max-width: 100%;
+            height: 100%;
+            display: block;
+            margin: 0 auto;
+        }
+
+        .mermaid-container .mermaid:active {
+            cursor: grabbing;
+        }
+
+        .mermaid-container.zoomed .mermaid {
+            height: 100%;
+            width: 100%;
+            cursor: grab;
+        }
+
+        .mermaid-controls {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            display: flex;
+            gap: 10px;
+            z-index: 20;
+            background: rgba(255, 255, 255, 0.95);
+            padding: 8px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .mermaid-control-btn {
+            background: #ffffff;
+            border: 1px solid #d1d5db;
+            border-radius: 6px;
+            padding: 10px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            color: #374151;
+            font-size: 14px;
+            min-width: 36px;
+            height: 36px;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .mermaid-control-btn:hover {
+            background: #f8fafc;
+            border-color: #3b82f6;
+            color: #3b82f6;
+            transform: translateY(-1px);
+        }
+
+        .mermaid-control-btn:active {
+            transform: scale(0.95);
+        }
+        
+        /* Custom Mermaid theme for better contrast and unified styling */
+        .mermaid .node rect,
+        .mermaid .node circle,
+        .mermaid .node ellipse,
+        .mermaid .node polygon {
+            stroke: #1e293b !important;
+            stroke-width: 2px !important;
+        }
+        
+        .mermaid .node .label,
+        .mermaid .nodeLabel {
+            color: #1e293b !important;
+            font-weight: 600 !important;
+            font-size: 13px !important;
+            font-family: 'Inter', sans-serif !important;
+        }
+        
+        .mermaid .edgePath .path {
+            stroke: #475569 !important;
+            stroke-width: 2px !important;
+        }
+        
+        .mermaid .edgeLabel {
+            background-color: #ffffff !important;
+            color: #1e293b !important;
+            font-weight: 600 !important;
+            font-size: 12px !important;
+            font-family: 'Inter', sans-serif !important;
+            border: 1px solid #e2e8f0 !important;
+            border-radius: 6px !important;
+            padding: 4px 8px !important;
+        }
+        
+        /* Enhanced node styling for better contrast */
+        .mermaid .node.stage0 rect,
+        .mermaid .node.stage0 circle,
+        .mermaid .node.stage0 ellipse,
+        .mermaid .node.stage0 polygon {
+            fill: #dbeafe !important;
+            stroke: #2563eb !important;
+        }
+        
+        .mermaid .node.stage1 rect,
+        .mermaid .node.stage1 circle,
+        .mermaid .node.stage1 ellipse,
+        .mermaid .node.stage1 polygon {
+            fill: #dcfce7 !important;
+            stroke: #16a34a !important;
+        }
+        
+        .mermaid .node.stage2 rect,
+        .mermaid .node.stage2 circle,
+        .mermaid .node.stage2 ellipse,
+        .mermaid .node.stage2 polygon {
+            fill: #fef3c7 !important;
+            stroke: #d97706 !important;
+        }
+        
+        .mermaid .node.stage3 rect,
+        .mermaid .node.stage3 circle,
+        .mermaid .node.stage3 ellipse,
+        .mermaid .node.stage3 polygon {
+            fill: #fce7f3 !important;
+            stroke: #be185d !important;
+        }
+        
+        .mermaid .node.final rect,
+        .mermaid .node.final circle,
+        .mermaid .node.final ellipse,
+        .mermaid .node.final polygon {
+            fill: #f3e8ff !important;
+            stroke: #7c3aed !important;
+        }
+        
+        /* Ensure text contrast for all node types */
+        .mermaid .node[class*="stage"] .label,
+        .mermaid .node[class*="stage"] .nodeLabel {
+            color: #1e293b !important;
+            font-weight: 700 !important;
+        }
+        
+        @media (max-width: 1024px) {
+            .toc-sidebar {
+                transform: translateX(-100%);
+                transition: transform 0.3s ease;
+            }
+            
+            .toc-sidebar.open {
+                transform: translateX(0);
+            }
+            
+            .main-content {
+                margin-left: 0;
+            }
+            
+            .bento-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .mermaid-control-btn:not(.reset-zoom) {
+                display: none;
+            }
+            .mermaid-controls {
+                top: auto;
+                bottom: 15px;
+                right: 15px;
+            }
+        }
+    </style>
+  <base target="_blank">
+</head>
+
+  <body class="bg-neutral font-sans text-primary overflow-x-hidden">
+    <!-- Table of Contents Sidebar -->
+    <nav class="toc-sidebar">
+      <div class="mb-8">
+        <div class="flex items-center space-x-3 mb-4">
+          <div class="w-12 h-12 bg-gradient-to-br from-blue-50 to-blue-100 rounded-lg flex items-center justify-center shadow-md">
+            <img src="logo.png" alt="广州哈蜜瓜" class="w-10 h-10 object-contain rounded" onerror="this.style.display='none'; this.parentElement.innerHTML='<i class=\'fas fa-building text-blue-600 text-base\'></i>';">
+          </div>
+          <div>
+            <h3 class="text-base font-bold text-primary leading-tight">广州哈蜜瓜</h3>
+            <p class="text-xs text-secondary">网络科技</p>
+          </div>
+        </div>
+        <h3 class="text-lg font-bold text-primary mb-4">目录导航</h3>
+      </div>
+      <div class="space-y-1">
+        <a href="#hero" class="toc-link">方案概览</a>
+        <a href="#core-concept" class="toc-link">核心服务理念</a>
+        <a href="#four-stage" class="toc-link">四阶递进路径</a>
+        <a href="#multi-platform" class="toc-link">多平台战略矩阵</a>
+        <a href="#tiktok-strategy" class="toc-link">• TikTok策略</a>
+        <a href="#facebook-strategy" class="toc-link">• Facebook策略</a>
+        <a href="#instagram-strategy" class="toc-link">• Instagram策略</a>
+        <a href="#youtube-strategy" class="toc-link">• YouTube策略</a>
+        <a href="#case-studies" class="toc-link">成功案例</a>
+        <a href="#cost-analysis" class="toc-link">成本优势分析</a>
+        <a href="#action-plan" class="toc-link">行动倡议</a>
+      </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <!-- Hero Section -->
+      <section id="hero" class="relative min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-800">
+        <div class="hero-overlay absolute inset-0"></div>
+        <div class="relative z-10 section-padding">
+          <div class="bento-grid max-w-7xl mx-auto">
+            <!-- Main Hero Content -->
+            <div class="space-y-12">
+              <!-- Company Identity Section -->
+              <div class="hero-company-card rounded-xl p-8 mb-8">
+                <div class="flex items-center space-x-6">
+                  <div class="w-24 h-24 bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl flex items-center justify-center shadow-2xl transform hover:scale-105 transition-all duration-300">
+                    <img src="logo.png" alt="广州哈蜜瓜网络科技有限公司" class="w-20 h-20 object-contain rounded-xl" onerror="this.style.display='none'; this.parentElement.innerHTML='<i class=\'fas fa-building text-3xl text-blue-600\'></i>';">
+                  </div>
+                  <div>
+                    <h3 class="text-3xl font-bold text-white mb-2">广州哈蜜瓜网络科技有限公司</h3>
+                    <p class="text-blue-200 text-lg font-medium">专业出海营销解决方案提供商</p>
+                    <div class="flex items-center space-x-2 mt-3">
+                      <div class="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
+                      <span class="text-green-300 text-sm">专业 • 可靠 • 高效</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Main Title Section -->
+              <div class="text-center mb-12">
+                <h1 class="hero-title font-serif text-white font-bold mb-8 text-shadow-lg">
+                  企业出海营销合作方案
+                  <span class="block gradient-text mt-6">全周期多平台战略版</span>
+                </h1>
+                <div class="bg-white/15 backdrop-blur-lg rounded-2xl p-8 max-w-4xl mx-auto border border-white/25 shadow-2xl">
+                  <p class="text-2xl text-blue-100 leading-relaxed mb-4 font-medium">
+                    从"轻量验证"到"战略深耕"的四阶递进路径
+                  </p>
+                  <p class="text-xl text-blue-200 leading-relaxed font-light">
+                    整合TikTok、Facebook、Instagram、YouTube四大核心平台
+                  </p>
+                    <div class="mt-6 flex justify-center space-x-4">
+                        <div class="bg-blue-500/20 rounded-full px-4 py-2 text-blue-200 text-sm">低风险投入</div>
+                        <div class="bg-green-500/20 rounded-full px-4 py-2 text-green-200 text-sm">快速见效</div>
+                        <div class="bg-purple-500/20 rounded-full px-4 py-2 text-purple-200 text-sm">专业服务</div>
+                    </div>
+                </div>
+              </div>
+
+              <!-- Key Value Propositions -->
+              <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-10">
+                <div class="hero-highlight-card rounded-xl p-6 text-center">
+                  <div class="w-16 h-16 bg-gradient-to-br from-blue-400 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg transform hover:scale-110 transition-transform">
+                    <i class="fas fa-chart-line text-white text-xl"></i>
+                  </div>
+                  <h3 class="font-bold text-white mb-3 text-lg">四阶递进</h3>
+                  <p class="text-blue-100 text-sm leading-relaxed">体验 → 深化 → 赋能 → 协同</p>
+                  <div class="mt-3 bg-blue-500/20 rounded-full px-3 py-1 text-blue-200 text-xs inline-block">系统化成长路径</div>
+                </div>
+
+                <div class="hero-highlight-card rounded-xl p-6 text-center">
+                  <div class="w-16 h-16 bg-gradient-to-br from-green-400 to-green-600 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg transform hover:scale-110 transition-transform">
+                    <i class="fas fa-globe text-white text-xl"></i>
+                  </div>
+                  <h3 class="font-bold text-white mb-3 text-lg">多平台矩阵</h3>
+                  <p class="text-blue-100 text-sm leading-relaxed">四大核心平台协同作战</p>
+                  <div class="mt-3 bg-green-500/20 rounded-full px-3 py-1 text-green-200 text-xs inline-block">全覆盖营销策略</div>
+                </div>
+
+                <div class="hero-highlight-card rounded-xl p-6 text-center">
+                  <div class="w-16 h-16 bg-gradient-to-br from-yellow-400 to-yellow-600 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg transform hover:scale-110 transition-transform">
+                    <i class="fas fa-handshake text-white text-xl"></i>
+                  </div>
+                  <h3 class="font-bold text-white mb-3 text-lg">陪伴式成长</h3>
+                  <p class="text-blue-100 text-sm leading-relaxed">从借船出海到造船远航</p>
+                  <div class="mt-3 bg-yellow-500/20 rounded-full px-3 py-1 text-yellow-200 text-xs inline-block">长期战略合作</div>
+                </div>
+
+                <div class="hero-highlight-card rounded-xl p-6 text-center">
+                  <div class="w-16 h-16 bg-gradient-to-br from-red-400 to-red-600 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg transform hover:scale-110 transition-transform">
+                    <i class="fas fa-dollar-sign text-white text-xl"></i>
+                  </div>
+                  <h3 class="font-bold text-white mb-3 text-lg">低风险启动</h3>
+                  <p class="text-blue-100 text-sm leading-relaxed">首月4,500元验证市场</p>
+                  <div class="mt-3 bg-red-500/20 rounded-full px-3 py-1 text-red-200 text-xs inline-block">低成本试水方案</div>
+                </div>
+              </div>
+
+              <!-- Contact CTA Section -->
+              <div class="hero-contact-card rounded-xl p-8 text-center">
+                <div class="flex items-center justify-center space-x-6 mb-6">
+                  <div class="w-20 h-20 bg-white rounded-full flex items-center justify-center shadow-2xl transform hover:scale-110 transition-transform">
+                    <i class="fas fa-phone text-blue-600 text-2xl"></i>
+                  </div>
+                  <div class="text-left">
+                    <h4 class="text-2xl font-bold text-white mb-2">立即开启出海之旅</h4>
+                    <p class="text-blue-100 text-lg mb-2">专业顾问一对一咨询</p>
+                    <p class="text-white text-xl font-bold bg-white/20 rounded-lg px-4 py-2 inline-block">郑经理：15902027545</p>
+                  </div>
+                </div>
+                <div class="bg-white/20 rounded-lg p-4 mt-6">
+                  <p class="text-blue-200 text-base">广州哈蜜瓜网络科技有限公司</p>
+                  <p class="text-blue-300 text-sm mt-1">专注企业出海营销解决方案</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Enhanced Information Panel - Larger and Clearer -->
+            <div class="flex justify-center lg:justify-end">
+                <div class="relative w-full max-w-2xl">
+                    <!-- Main Visual Card - Larger Size -->
+                    <div class="bg-white/98 backdrop-blur-sm rounded-3xl p-10 shadow-2xl border border-white/30 transform hover:scale-105 transition-all duration-300">
+                        <!-- Company Logo Section - Larger -->
+                        <div class="text-center mb-8">
+                            <div class="w-32 h-32 mx-auto mb-6 bg-gradient-to-br from-blue-50 to-blue-100 rounded-3xl flex items-center justify-center shadow-xl">
+                                <img src="logo.png" alt="广州哈蜜瓜网络科技有限公司" class="w-28 h-28 object-contain rounded-2xl" onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=\'w-24 h-24 bg-gradient-to-br from-blue-400 to-blue-600 rounded-2xl flex items-center justify-center\'><i class=\'fas fa-building text-4xl text-white\'></i></div>';">
+                            </div>
+                            <h4 class="text-2xl font-bold text-gray-800 mb-2">广州哈蜜瓜网络科技</h4>
+                            <p class="text-gray-600 text-base">专业出海营销解决方案</p>
+                        </div>
+
+                        <!-- Key Metrics - Larger Numbers -->
+                        <div class="grid grid-cols-2 gap-6 mb-8">
+                            <div class="bg-blue-50 rounded-2xl p-6 text-center">
+                                <div class="text-3xl font-bold text-blue-600 mb-2">4,500</div>
+                                <div class="text-blue-700 text-base">元起投</div>
+                                <div class="text-blue-500 text-xs mt-1">低门槛验证</div>
+                            </div>
+                            <div class="bg-green-50 rounded-2xl p-6 text-center">
+                                <div class="text-3xl font-bold text-green-600 mb-2">30</div>
+                                <div class="text-green-700 text-base">天见效</div>
+                                <div class="text-green-500 text-xs mt-1">快速启动</div>
+                            </div>
+                        </div>
+
+                        <!-- Platform Icons - Larger -->
+                        <div class="mb-8">
+                            <h5 class="text-gray-700 font-semibold mb-4 text-center text-lg">四大平台全覆盖</h5>
+                            <div class="flex justify-center space-x-6">
+                                <div class="w-16 h-16 bg-black rounded-2xl flex items-center justify-center text-white text-2xl shadow-lg transform hover:scale-110 transition-transform">
+                                    <i class="fab fa-tiktok"></i>
+                                </div>
+                                <div class="w-16 h-16 bg-blue-600 rounded-2xl flex items-center justify-center text-white text-2xl shadow-lg transform hover:scale-110 transition-transform">
+                                    <i class="fab fa-facebook"></i>
+                                </div>
+                                <div class="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-500 rounded-2xl flex items-center justify-center text-white text-2xl shadow-lg transform hover:scale-110 transition-transform">
+                                    <i class="fab fa-instagram"></i>
+                                </div>
+                                <div class="w-16 h-16 bg-red-600 rounded-2xl flex items-center justify-center text-white text-2xl shadow-lg transform hover:scale-110 transition-transform">
+                                    <i class="fab fa-youtube"></i>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Contact Info - Enhanced -->
+                        <div class="bg-gradient-to-r from-blue-50 via-indigo-50 to-blue-50 rounded-2xl p-8 text-center border border-blue-100">
+                            <div class="flex items-center justify-center space-x-4 mb-4">
+                                <div class="w-12 h-12 bg-gradient-to-br from-blue-600 to-blue-700 rounded-full flex items-center justify-center shadow-lg">
+                                    <i class="fas fa-phone text-white text-lg"></i>
+                                </div>
+                                <span class="text-blue-800 font-bold text-lg">立即咨询</span>
+                            </div>
+                            <div class="text-2xl font-bold text-blue-900 mb-2">15902027545</div>
+                            <div class="text-blue-700 text-base">郑经理</div>
+                            <div class="text-blue-600 text-sm mt-1">广州哈蜜瓜网络科技</div>
+                        </div>
+                    </div>
+
+                    <!-- Enhanced Floating Stats -->
+                    <div class="absolute -top-6 -right-6 bg-gradient-to-br from-yellow-400 to-orange-400 text-orange-900 rounded-full w-20 h-20 flex items-center justify-center shadow-2xl font-bold text-base">
+                        热门
+                    </div>
+                    
+                    <div class="absolute -bottom-6 -left-6 bg-gradient-to-br from-green-400 to-green-500 text-green-900 rounded-full w-18 h-18 flex items-center justify-center shadow-2xl font-bold text-sm">
+                        专业
+                    </div>
+                </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Core Concept Section -->
+      <section id="core-concept" class="section-padding bg-white">
+        <div class="max-w-6xl mx-auto">
+          <div class="text-center mb-16">
+            <h2 class="text-4xl font-serif font-bold text-primary mb-6">核心服务理念</h2>
+            <p class="text-xl text-secondary max-w-3xl mx-auto leading-relaxed">
+              我们致力于成为企业出海路上的长期战略伙伴，提供从&#34;轻量验证&#34;到&#34;团队孵化&#34;再到&#34;战略深耕&#34;的完整成长路径
+            </p>
+          </div>
+
+          <!-- Philosophy Cards -->
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+            <div class="stage-card rounded-xl p-8 text-center">
+              <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                <i class="fas fa-compass text-2xl text-blue-600"></i>
+              </div>
+              <h3 class="text-xl font-semibold mb-4">陪伴式成长</h3>
+              <p class="text-secondary">系统化、分阶段合作，确保每一步投入都转化为可量化增长</p>
+            </div>
+            <div class="stage-card rounded-xl p-8 text-center">
+              <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                <i class="fas fa-cogs text-2xl text-green-600"></i>
+              </div>
+              <h3 class="text-xl font-semibold mb-4">四阶递进</h3>
+              <p class="text-secondary">体验-深化-赋能-协同，逐步建立海外品牌影响力</p>
+            </div>
+            <div class="stage-card rounded-xl p-8 text-center">
+              <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                <i class="fas fa-ship text-2xl text-purple-600"></i>
+              </div>
+              <h3 class="text-xl font-semibold mb-4">造船远航</h3>
+              <p class="text-secondary">从&#34;借船出海&#34;到拥有内部核心能力的战略跨越</p>
+            </div>
+          </div>
+
+          <!-- Strategy Diagram -->
+          <div class="bg-slate-50 rounded-2xl p-8">
+            <h3 class="text-2xl font-semibold text-center mb-8">四阶递进战略框架</h3>
+            <div class="mermaid-container">
+              <div class="mermaid-controls">
+                <button class="mermaid-control-btn zoom-in" title="放大">
+                  <i class="fas fa-search-plus"></i>
+                </button>
+                <button class="mermaid-control-btn zoom-out" title="缩小">
+                  <i class="fas fa-search-minus"></i>
+                </button>
+                <button class="mermaid-control-btn reset-zoom" title="重置">
+                  <i class="fas fa-expand-arrows-alt"></i>
+                </button>
+                <button class="mermaid-control-btn fullscreen" title="全屏查看">
+                  <i class="fas fa-expand"></i>
+                </button>
+              </div>
+              <div class="mermaid">
+                graph TD
+                A[&#34;第一阶段：轻量验证
+                <br/>首月体验期&#34;] --&gt; B[&#34;第二阶段：规模深化
+                <br/>季度合作期&#34;]
+                B --&gt; C[&#34;第三阶段：能力赋能
+                <br/>能力移交期&#34;]
+                C --&gt; D[&#34;第四阶段：战略协同
+                <br/>长期战略期&#34;]
+
+                A1[&#34;10个账号矩阵
+                <br/>4,500元投资&#34;] --&gt; A
+                B1[&#34;50个账号矩阵
+                <br/>19,800元/月&#34;] --&gt; B
+                C1[&#34;团队孵化+IP打造
+                <br/>+电商闭环&#34;] --&gt; C
+                D1[&#34;战略顾问+本土化
+                <br/>品牌生态&#34;] --&gt; D
+
+                style A fill:#dbeafe,stroke:#3b82f6,stroke-width:3px,color:#1e293b
+                style B fill:#dcfce7,stroke:#16a34a,stroke-width:3px,color:#1e293b
+                style C fill:#fef3c7,stroke:#d97706,stroke-width:3px,color:#1e293b
+                style D fill:#fce7f3,stroke:#be185d,stroke-width:3px,color:#1e293b
+                style A1 fill:#f8fafc,stroke:#64748b,stroke-width:2px,color:#1e293b
+                style B1 fill:#f8fafc,stroke:#64748b,stroke-width:2px,color:#1e293b
+                style C1 fill:#f8fafc,stroke:#64748b,stroke-width:2px,color:#1e293b
+                style D1 fill:#f8fafc,stroke:#64748b,stroke-width:2px,color:#1e293b
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Four Stage Strategy -->
+      <section id="four-stage" class="section-padding bg-slate-50">
+        <div class="max-w-6xl mx-auto">
+          <div class="text-center mb-16">
+            <h2 class="text-4xl font-serif font-bold text-primary mb-6">四阶递进合作路径</h2>
+            <p class="text-xl text-secondary max-w-3xl mx-auto">
+              精心设计的环环相扣四阶段模型，引导企业平稳、高效地实现出海目标
+            </p>
+          </div>
+
+          <!-- Stage Cards -->
+          <div class="space-y-12">
+            <!-- Stage 1 -->
+            <div class="stage-card rounded-2xl p-8">
+              <div class="flex items-start space-x-6">
+                <div class="flex-shrink-0">
+                  <div class="w-16 h-16 bg-blue-500 rounded-full flex items-center justify-center">
+                    <span class="text-2xl font-bold text-white">1</span>
+                  </div>
+                </div>
+                <div class="flex-1">
+                  <div class="flex items-center space-x-4 mb-4">
+                    <h3 class="text-2xl font-semibold">轻量验证，建立信任</h3>
+                    <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">首月体验期</span>
+                  </div>
+                  <div class="grid md:grid-cols-2 gap-8">
+                    <div>
+                      <h4 class="font-semibold mb-3 text-blue-600">核心目标</h4>
+                      <p class="text-secondary mb-4">低成本验证模型，获取首批成果</p>
+
+                      <h4 class="font-semibold mb-3 text-blue-600">合作模式</h4>
+                      <ul class="space-y-2 text-secondary">
+                        <li>• 启动10个TikTok账号代运营</li>
+                        <li>• 30天系统化切入赛道</li>
+                        <li>• 每日内容产出与互动</li>
+                      </ul>
+                    </div>
+                    <div>
+                      <h4 class="font-semibold mb-3 text-blue-600">投资与价值</h4>
+                      <div class="bg-blue-50 rounded-lg p-4 mb-4">
+                        <div class="text-3xl font-bold text-blue-600 mb-1">4,500元</div>
+                        <div class="text-sm text-blue-700">首月固定投入</div>
+                      </div>
+                      <p class="text-secondary text-sm">
+                        以最低成本验证产品在目标市场的短视频获客潜力，用实际数据建立合作互信
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Stage 2 -->
+            <div class="stage-card rounded-2xl p-8">
+              <div class="flex items-start space-x-6">
+                <div class="flex-shrink-0">
+                  <div class="w-16 h-16 bg-green-500 rounded-full flex items-center justify-center">
+                    <span class="text-2xl font-bold text-white">2</span>
+                  </div>
+                </div>
+                <div class="flex-1">
+                  <div class="flex items-center space-x-4 mb-4">
+                    <h3 class="text-2xl font-semibold">规模深化，矩阵运营</h3>
+                    <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium">季度合作期</span>
+                  </div>
+                  <div class="grid md:grid-cols-2 gap-8">
+                    <div>
+                      <h4 class="font-semibold mb-3 text-green-600">核心目标</h4>
+                      <p class="text-secondary mb-4">规模化获取客户，建立品牌基础影响力</p>
+
+                      <h4 class="font-semibold mb-3 text-green-600">升级内容</h4>
+                      <ul class="space-y-2 text-secondary">
+                        <li>• 账号矩阵扩展至50个</li>
+                        <li>• 内容策略垂直深耕</li>
+                        <li>• 数据分析与广告推流</li>
+                      </ul>
+                    </div>
+                    <div>
+                      <h4 class="font-semibold mb-3 text-green-600">投资回报</h4>
+                      <div class="space-y-3">
+                        <div class="bg-green-50 rounded-lg p-3">
+                          <div class="text-xl font-bold text-green-600">19,800元/月</div>
+                          <div class="text-sm text-green-700">月度费用</div>
+                        </div>
+                        <div class="bg-green-50 rounded-lg p-3">
+                          <div class="text-xl font-bold text-green-600">396元</div>
+                          <div class="text-sm text-green-700">单账号月度成本</div>
+                        </div>
+                      </div>
+                      <p class="text-secondary text-sm mt-3">
+                        通过规模效应，性价比显著提升，为IP打造积累充足资产
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Stage 3 -->
+            <div class="stage-card rounded-2xl p-8">
+              <div class="flex items-start space-x-6">
+                <div class="flex-shrink-0">
+                  <div class="w-16 h-16 bg-yellow-500 rounded-full flex items-center justify-center">
+                    <span class="text-2xl font-bold text-white">3</span>
+                  </div>
+                </div>
+                <div class="flex-1">
+                  <div class="flex items-center space-x-4 mb-4">
+                    <h3 class="text-2xl font-semibold">能力赋能，孵化自营</h3>
+                    <span class="bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-sm font-medium">能力移交期</span>
+                  </div>
+                  <div class="grid md:grid-cols-3 gap-6">
+                    <div>
+                      <h4 class="font-semibold mb-3 text-yellow-600">团队孵化</h4>
+                      <p class="text-secondary text-sm">系统化培训，手把手教授全流程操作</p>
+                    </div>
+                    <div>
+                      <h4 class="font-semibold mb-3 text-yellow-600">IP打造</h4>
+                      <p class="text-secondary text-sm">协助规划创始人或专家IP，建立行业权威</p>
+                    </div>
+                    <div>
+                      <h4 class="font-semibold mb-3 text-yellow-600">电商闭环</h4>
+                      <p class="text-secondary text-sm">店铺运营+橱窗带货+直播变现完整链路</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Stage 4 -->
+            <div class="stage-card rounded-2xl p-8">
+              <div class="flex items-start space-x-6">
+                <div class="flex-shrink-0">
+                  <div class="w-16 h-16 bg-purple-500 rounded-full flex items-center justify-center">
+                    <span class="text-2xl font-bold text-white">4</span>
+                  </div>
+                </div>
+                <div class="flex-1">
+                  <div class="flex items-center space-x-4 mb-4">
+                    <h3 class="text-2xl font-semibold">战略协同，本土扎根</h3>
+                    <span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm font-medium">长期战略期</span>
+                  </div>
+                  <div class="grid md:grid-cols-2 gap-8">
+                    <div>
+                      <h4 class="font-semibold mb-3 text-purple-600">核心目标</h4>
+                      <p class="text-secondary mb-4">助力企业完成海外本土化布局与深度扎根</p>
+
+                      <h4 class="font-semibold mb-3 text-purple-600">协同方向</h4>
+                      <ul class="space-y-2 text-secondary">
+                        <li>• 线下市场拓展决策支持</li>
+                        <li>• 本土化内容营销咨询</li>
+                        <li>• 整合线上线下资源</li>
+                      </ul>
+                    </div>
+                    <div>
+                      <h4 class="font-semibold mb-3 text-purple-600">价值承诺</h4>
+                      <div class="bg-purple-50 rounded-lg p-4">
+                        <p class="text-secondary">
+                          作为长期战略伙伴，共同将线上影响力转化为线下市场实体，
+                          实现真正的全球化品牌布局，让品牌不仅&#34;出海&#34;，更能&#34;扎根&#34;
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Multi-Platform Strategy -->
+      <section id="multi-platform" class="section-padding bg-white">
+        <div class="max-w-6xl mx-auto">
+          <div class="text-center mb-16">
+            <h2 class="text-4xl font-serif font-bold text-primary mb-6">多平台战略矩阵</h2>
+            <p class="text-xl text-secondary max-w-3xl mx-auto">
+              构建以TikTok、Facebook、Instagram和YouTube为核心的多平台战略矩阵，实现营销合力最大化
+            </p>
+          </div>
+
+          <!-- Platform Overview -->
+          <div class="platform-grid mb-16">
+            <div class="stage-card rounded-xl p-8">
+              <div class="flex items-center space-x-4 mb-6">
+                <div class="w-12 h-12 bg-black rounded-lg flex items-center justify-center">
+                  <i class="fab fa-tiktok text-white text-xl"></i>
+                </div>
+                <div>
+                  <h3 class="text-xl font-semibold">TikTok</h3>
+                  <p class="text-secondary">爆款打造与流量引爆</p>
+                </div>
+              </div>
+              <p class="text-secondary mb-4">
+                全球短视频领导者，强大的推荐算法和病毒式传播特性，适合快速品牌曝光和产品&#34;种草&#34;
+              </p>
+              <div class="bg-slate-50 rounded-lg p-4">
+                <h4 class="font-medium mb-2">策略核心</h4>
+                <p class="text-sm text-secondary">内容为王，利用热门音乐、挑战赛和创意特效，实现低成本高爆发流量获取</p>
+              </div>
+            </div>
+
+            <div class="stage-card rounded-xl p-8">
+              <div class="flex items-center space-x-4 mb-6">
+                <div class="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center">
+                  <i class="fab fa-facebook text-white text-xl"></i>
+                </div>
+                <div>
+                  <h3 class="text-xl font-semibold">Facebook</h3>
+                  <p class="text-secondary">社群运营与精准广告投放</p>
+                </div>
+              </div>
+              <p class="text-secondary mb-4">
+                全球最大社交平台，最广泛用户覆盖和最成熟广告系统，适合深度用户关系建立
+              </p>
+              <div class="bg-slate-50 rounded-lg p-4">
+                <h4 class="font-medium mb-2">策略核心</h4>
+                <p class="text-sm text-secondary">广告+社群双轮驱动，精准投放获取高质量线索，建立品牌社群</p>
+              </div>
+            </div>
+
+            <div class="stage-card rounded-xl p-8">
+              <div class="flex items-center space-x-4 mb-6">
+                <div class="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center">
+                  <i class="fab fa-instagram text-white text-xl"></i>
+                </div>
+                <div>
+                  <h3 class="text-xl font-semibold">Instagram</h3>
+                  <p class="text-secondary">视觉化呈现与品牌调性塑造</p>
+                </div>
+              </div>
+              <p class="text-secondary mb-4">
+                高质量图片和短视频内容，品牌进行视觉化呈现和调性塑造的首选平台
+              </p>
+              <div class="bg-slate-50 rounded-lg p-4">
+                <h4 class="font-medium mb-2">策略核心</h4>
+                <p class="text-sm text-secondary">颜值即正义，精心策划视觉内容，打造统一高级感的品牌形象</p>
+              </div>
+            </div>
+
+            <div class="stage-card rounded-xl p-8">
+              <div class="flex items-center space-x-4 mb-6">
+                <div class="w-12 h-12 bg-red-600 rounded-lg flex items-center justify-center">
+                  <i class="fab fa-youtube text-white text-xl"></i>
+                </div>
+                <div>
+                  <h3 class="text-xl font-semibold">YouTube</h3>
+                  <p class="text-secondary">深度评测与专业信任建立</p>
+                </div>
+              </div>
+              <p class="text-secondary mb-4">
+                全球最大视频分享平台，第二大搜索引擎，建立专业信任和进行深度内容教育的核心阵地
+              </p>
+              <div class="bg-slate-50 rounded-lg p-4">
+                <h4 class="font-medium mb-2">策略核心</h4>
+                <p class="text-sm text-secondary">深度内容+SEO优化，专业视频建立行业权威性，持续获取精准有机流量</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Platform Strategy Details -->
+          <div class="space-y-12" id="platform-details">
+            <!-- TikTok Strategy -->
+            <div id="tiktok-strategy" class="stage-card rounded-2xl p-8">
+              <h3 class="text-2xl font-semibold mb-6 flex items-center">
+                <i class="fab fa-tiktok mr-3"></i>
+                TikTok 四阶递进策略
+              </h3>
+              <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="bg-blue-50 rounded-lg p-4">
+                  <h4 class="font-semibold text-blue-600 mb-2">第一阶段：验证</h4>
+                  <p class="text-sm text-secondary">10账号矩阵，30天验证，五步起号SOP</p>
+                </div>
+                <div class="bg-green-50 rounded-lg p-4">
+                  <h4 class="font-semibold text-green-600 mb-2">第二阶段：深化</h4>
+                  <p class="text-sm text-secondary">50账号矩阵，季度运营，垂直深耕</p>
+                </div>
+                <div class="bg-yellow-50 rounded-lg p-4">
+                  <h4 class="font-semibold text-yellow-600 mb-2">第三阶段：赋能</h4>
+                  <p class="text-sm text-secondary">IP打造与电商闭环，直播带货</p>
+                </div>
+                <div class="bg-purple-50 rounded-lg p-4">
+                  <h4 class="font-semibold text-purple-600 mb-2">第四阶段：协同</h4>
+                  <p class="text-sm text-secondary">战略顾问，本土深耕，品牌生态</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Facebook Strategy -->
+            <div id="facebook-strategy" class="stage-card rounded-2xl p-8">
+              <h3 class="text-2xl font-semibold mb-6 flex items-center">
+                <i class="fab fa-facebook mr-3 text-blue-600"></i>
+                Facebook 四阶递进策略
+              </h3>
+              <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="bg-blue-50 rounded-lg p-4">
+                  <h4 class="font-semibold text-blue-600 mb-2">第一阶段：验证</h4>
+                  <p class="text-sm text-secondary">10主页矩阵，30天验证，精准投放测试</p>
+                </div>
+                <div class="bg-green-50 rounded-lg p-4">
+                  <h4 class="font-semibold text-green-600 mb-2">第二阶段：深化</h4>
+                  <p class="text-sm text-secondary">50主页矩阵，社群构建，再营销</p>
+                </div>
+                <div class="bg-yellow-50 rounded-lg p-4">
+                  <h4 class="font-semibold text-yellow-600 mb-2">第三阶段：赋能</h4>
+                  <p class="text-sm text-secondary">社群运营培训，广告优化技能</p>
+                </div>
+                <div class="bg-purple-50 rounded-lg p-4">
+                  <h4 class="font-semibold text-purple-600 mb-2">第四阶段：协同</h4>
+                  <p class="text-sm text-secondary">品牌生态构建，跨平台整合</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Instagram Strategy -->
+            <div id="instagram-strategy" class="stage-card rounded-2xl p-8">
+              <h3 class="text-2xl font-semibold mb-6 flex items-center">
+                <i class="fab fa-instagram mr-3 text-pink-600"></i>
+                Instagram 四阶递进策略
+              </h3>
+              <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="bg-blue-50 rounded-lg p-4">
+                  <h4 class="font-semibold text-blue-600 mb-2">第一阶段：验证</h4>
+                  <p class="text-sm text-secondary">10账号矩阵，视觉风格测试</p>
+                </div>
+                <div class="bg-green-50 rounded-lg p-4">
+                  <h4 class="font-semibold text-green-600 mb-2">第二阶段：深化</h4>
+                  <p class="text-sm text-secondary">50账号矩阵，Reels重点，KOL合作</p>
+                </div>
+                <div class="bg-yellow-50 rounded-lg p-4">
+                  <h4 class="font-semibold text-yellow-600 mb-2">第三阶段：赋能</h4>
+                  <p class="text-sm text-secondary">视觉IP打造，网红合作流程</p>
+                </div>
+                <div class="bg-purple-50 rounded-lg p-4">
+                  <h4 class="font-semibold text-purple-600 mb-2">第四阶段：协同</h4>
+                  <p class="text-sm text-secondary">品牌文化构建，用户社群</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- YouTube Strategy -->
+            <div id="youtube-strategy" class="stage-card rounded-2xl p-8">
+              <h3 class="text-2xl font-semibold mb-6 flex items-center">
+                <i class="fab fa-youtube mr-3 text-red-600"></i>
+                YouTube 四阶递进策略
+              </h3>
+              <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="bg-blue-50 rounded-lg p-4">
+                  <h4 class="font-semibold text-blue-600 mb-2">第一阶段：验证</h4>
+                  <p class="text-sm text-secondary">10频道矩阵，深度内容SEO优化</p>
+                </div>
+                <div class="bg-green-50 rounded-lg p-4">
+                  <h4 class="font-semibold text-green-600 mb-2">第二阶段：深化</h4>
+                  <p class="text-sm text-secondary">50频道矩阵，标准化生产，广告投放</p>
+                </div>
+                <div class="bg-yellow-50 rounded-lg p-4">
+                  <h4 class="font-semibold text-yellow-600 mb-2">第三阶段：赋能</h4>
+                  <p class="text-sm text-secondary">专业IP打造，深度内容策略</p>
+                </div>
+                <div class="bg-purple-50 rounded-lg p-4">
+                  <h4 class="font-semibold text-purple-600 mb-2">第四阶段：协同</h4>
+                  <p class="text-sm text-secondary">品牌护城河构建，长期资产沉淀</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Case Studies -->
+      <section id="case-studies" class="section-padding bg-slate-50">
+        <div class="max-w-6xl mx-auto">
+          <div class="text-center mb-16">
+            <h2 class="text-4xl font-serif font-bold text-primary mb-6">成功案例</h2>
+            <p class="text-xl text-secondary max-w-3xl mx-auto">
+              见证从0到1的品牌成长轨迹，真实的结果胜于一切雄辩
+            </p>
+          </div>
+
+          <div class="space-y-12">
+            <!-- Case 1 -->
+            <div class="stage-card rounded-2xl p-8">
+              <div class="grid md:grid-cols-2 gap-8">
+                <div>
+                  <div class="flex items-center space-x-4 mb-6">
+                    <div class="w-12 h-12 bg-blue-500 rounded-lg flex items-center justify-center">
+                      <i class="fas fa-industry text-white"></i>
+                    </div>
+                    <div>
+                      <h3 class="text-xl font-semibold">机械制造品牌</h3>
+                      <p class="text-secondary">从0到稳定获客的30天验证</p>
+                    </div>
+                  </div>
+
+                  <div class="space-y-4">
+                    <div>
+                      <h4 class="font-semibold mb-2">客户背景</h4>
+                      <p class="text-secondary text-sm">华南地区中型机械制造商，传统外贸渠道增长乏力</p>
+                    </div>
+                    <div>
+                      <h4 class="font-semibold mb-2">合作阶段</h4>
+                      <p class="text-secondary text-sm">第一阶段（轻量验证期）</p>
+                    </div>
+                    <div>
+                      <h4 class="font-semibold mb-2">核心动作</h4>
+                      <p class="text-secondary text-sm">启用10账号矩阵，聚焦&#34;工厂实景&#34;、&#34;技术演示&#34;、&#34;问题解决&#34;三大内容板块</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div>
+                  <h4 class="font-semibold mb-4 text-center">关键成果（30天）</h4>
+                  <div class="grid grid-cols-2 gap-4 mb-6">
+                    <div class="bg-blue-50 rounded-lg p-4 text-center">
+                      <div class="text-2xl font-bold text-blue-600">12,000+</div>
+                      <div class="text-sm text-blue-700">总粉丝增长</div>
+                    </div>
+                    <div class="bg-green-50 rounded-lg p-4 text-center">
+                      <div class="text-2xl font-bold text-green-600">238</div>
+                      <div class="text-sm text-green-700">有效询盘</div>
+                    </div>
+                    <div class="bg-yellow-50 rounded-lg p-4 text-center">
+                      <div class="text-2xl font-bold text-yellow-600">82万</div>
+                      <div class="text-sm text-yellow-700">最高播放量</div>
+                    </div>
+                    <div class="bg-purple-50 rounded-lg p-4 text-center">
+                      <div class="text-2xl font-bold text-purple-600">2笔</div>
+                      <div class="text-sm text-purple-700">订单成交</div>
+                    </div>
+                  </div>
+
+                  <div class="bg-slate-100 rounded-lg p-4">
+                    <h4 class="font-semibold mb-2">客户反馈</h4>
+                    <p class="text-secondary text-sm italic">
+                      &#34;用不到一次参展费用的零头，跑通了一个全新的获客渠道。数据是实实在在的，我们知道该往哪里投入了。&#34;
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Case 2 -->
+            <div class="stage-card rounded-2xl p-8">
+              <div class="grid md:grid-cols-2 gap-8">
+                <div>
+                  <div class="flex items-center space-x-4 mb-6">
+                    <div class="w-12 h-12 bg-pink-500 rounded-lg flex items-center justify-center">
+                      <i class="fas fa-gem text-white"></i>
+                    </div>
+                    <div>
+                      <h3 class="text-xl font-semibold">时尚配饰品牌</h3>
+                      <p class="text-secondary">从卖货到电商闭环的90天蜕变</p>
+                    </div>
+                  </div>
+
+                  <div class="space-y-4">
+                    <div>
+                      <h4 class="font-semibold mb-2">客户背景</h4>
+                      <p class="text-secondary text-sm">跨境电商卖家，产品同质化严重，陷入价格战</p>
+                    </div>
+                    <div>
+                      <h4 class="font-semibold mb-2">合作阶段</h4>
+                      <p class="text-secondary text-sm">第一阶段 → 第二阶段 → 第三阶段</p>
+                    </div>
+                    <div>
+                      <h4 class="font-semibold mb-2">核心动作</h4>
+                      <p class="text-secondary text-sm">账号矩阵扩至50个，启动&#34;设计师主理人&#34;IP打造，系统运营店铺与橱窗</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div>
+                  <h4 class="font-semibold mb-4 text-center">关键成果（90天）</h4>
+                  <div class="grid grid-cols-2 gap-4 mb-6">
+                    <div class="bg-pink-50 rounded-lg p-4 text-center">
+                      <div class="text-2xl font-bold text-pink-600">5,000万+</div>
+                      <div class="text-sm text-pink-700">话题播放量</div>
+                    </div>
+                    <div class="bg-blue-50 rounded-lg p-4 text-center">
+                      <div class="text-2xl font-bold text-blue-600">8.6万</div>
+                      <div class="text-sm text-blue-700">IP账号粉丝</div>
+                    </div>
+                    <div class="bg-green-50 rounded-lg p-4 text-center">
+                      <div class="text-2xl font-bold text-green-600">$8万</div>
+                      <div class="text-sm text-green-700">月度GMV</div>
+                    </div>
+                    <div class="bg-yellow-50 rounded-lg p-4 text-center">
+                      <div class="text-2xl font-bold text-yellow-600">156单</div>
+                      <div class="text-sm text-yellow-700">首场直播成交</div>
+                    </div>
+                  </div>
+
+                  <div class="bg-slate-100 rounded-lg p-4">
+                    <h4 class="font-semibold mb-2">客户反馈</h4>
+                    <p class="text-secondary text-sm italic">
+                      &#34;最大的价值是从获客到成交的全链路打通。我们不再只是做内容，而是建立了自己的海外销售阵地。&#34;
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Case 3 -->
+            <div class="stage-card rounded-2xl p-8">
+              <div class="grid md:grid-cols-2 gap-8">
+                <div>
+                  <div class="flex items-center space-x-4 mb-6">
+                    <div class="w-12 h-12 bg-indigo-500 rounded-lg flex items-center justify-center">
+                      <i class="fas fa-microchip text-white"></i>
+                    </div>
+                    <div>
+                      <h3 class="text-xl font-semibold">电子供应链工厂</h3>
+                      <p class="text-secondary">迈向品牌出海的长期主义之路</p>
+                    </div>
+                  </div>
+
+                  <div class="space-y-4">
+                    <div>
+                      <h4 class="font-semibold mb-2">客户背景</h4>
+                      <p class="text-secondary text-sm">为国际品牌代工的成熟工厂，决心打造自有品牌直面消费者</p>
+                    </div>
+                    <div>
+                      <h4 class="font-semibold mb-2">合作阶段</h4>
+                      <p class="text-secondary text-sm">全周期路径规划中（第二阶段向第三阶段过渡）</p>
+                    </div>
+                    <div>
+                      <h4 class="font-semibold mb-2">核心动作</h4>
+                      <p class="text-secondary text-sm">50账号规模运营，团队孵化课程，本土化内容策略，供应链体系筹备</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div>
+                  <h4 class="font-semibold mb-4 text-center">当前进展</h4>
+                  <div class="space-y-3 mb-6">
+                    <div class="flex items-center space-x-3">
+                      <i class="fas fa-check-circle text-green-500"></i>
+                      <span class="text-secondary text-sm">完成目标市场深度内容偏好调研</span>
+                    </div>
+                    <div class="flex items-center space-x-3">
+                      <i class="fas fa-check-circle text-green-500"></i>
+                      <span class="text-secondary text-sm">规划&#34;海外电商运营官&#34;孵化课程表</span>
+                    </div>
+                    <div class="flex items-center space-x-3">
+                      <i class="fas fa-check-circle text-green-500"></i>
+                      <span class="text-secondary text-sm">产出首批本土化节日内容素材</span>
+                    </div>
+                    <div class="flex items-center space-x-3">
+                      <i class="fas fa-check-circle text-green-500"></i>
+                      <span class="text-secondary text-sm">完成本土化产品包装与店铺设计</span>
+                    </div>
+                  </div>
+
+                  <div class="bg-slate-100 rounded-lg p-4">
+                    <h4 class="font-semibold mb-2">项目价值</h4>
+                    <p class="text-secondary text-sm">
+                      为长期品牌转型提供清晰路线图，避免&#34;重金盲目投入&#34;陷阱，实现从OEM到品牌DTC的稳步转型
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Cost Analysis -->
+      <section id="cost-analysis" class="section-padding bg-white">
+        <div class="max-w-6xl mx-auto">
+          <div class="text-center mb-16">
+            <h2 class="text-4xl font-serif font-bold text-primary mb-6">成本优势分析</h2>
+            <p class="text-xl text-secondary max-w-3xl mx-auto">
+              自建团队 vs. 我们的递进式合作路径，为什么选择我们是最优路径
+            </p>
+          </div>
+
+          <div class="overflow-x-auto">
+            <div class="min-w-[800px]">
+              <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="bg-slate-50 rounded-xl p-6">
+                  <h3 class="text-lg font-semibold mb-4 text-center">对比维度</h3>
+                  <div class="space-y-4">
+                    <div class="text-sm font-medium text-secondary">初始门槛与风险</div>
+                    <div class="text-sm font-medium text-secondary">规模化成本</div>
+                    <div class="text-sm font-medium text-secondary">能力获取速度</div>
+                    <div class="text-sm font-medium text-secondary">战略灵活性</div>
+                  </div>
+                </div>
+
+                <div class="bg-red-50 rounded-xl p-6">
+                  <h3 class="text-lg font-semibold mb-4 text-center text-red-600">企业自建团队</h3>
+                  <div class="space-y-4">
+                    <div class="text-sm text-secondary">高。需一次性投入大量资金招聘、采购设备、摸索试错，风险集中</div>
+                    <div class="text-sm text-secondary">线性飙升。每增加一个账号，人力、设备、管理成本近乎等比增加</div>
+                    <div class="text-sm text-secondary">缓慢。团队搭建、培训、磨合至少需3-6个月，且能力上限取决于招聘结果</div>
+                    <div class="text-sm text-secondary">低。团队架构固定，调整方向成本高、周期长</div>
+                  </div>
+                </div>
+
+                <div class="bg-green-50 rounded-xl p-6">
+                  <h3 class="text-lg font-semibold mb-4 text-center text-green-600">我方递进式合作</h3>
+                  <div class="space-y-4">
+                    <div class="text-sm text-secondary">极低。首月仅4,500元即可完整验证模式，风险接近于零</div>
+                    <div class="text-sm text-secondary">规模效应显著。单账号成本从450元降至396元，性价比随规模提升</div>
+                    <div class="text-sm text-secondary">快速导入+渐进内化。首月即获得成熟能力产出，第三阶段直接孵化团队</div>
+                    <div class="text-sm text-secondary">极高。可按月、按季度灵活调整合作规模与重心，无缝切换</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Why Now Section -->
+          <div class="mt-16 bg-gradient-to-r from-blue-50 to-indigo-50 rounded-2xl p-8">
+            <h3 class="text-2xl font-semibold text-center mb-6">为什么现在是行动的最佳时机？</h3>
+            <div class="max-w-4xl mx-auto text-center">
+              <p class="text-lg text-secondary leading-relaxed mb-6">
+                外贸环境已从&#34;全球化红利期&#34;进入&#34;品牌化深耕期&#34;。过去等待询盘的模式已然失效，
+                未来属于在海外拥有自主品牌影响力和直接销售渠道的企业。
+              </p>
+              <p class="text-secondary">
+                我们的路径正是为这一目标设计：先通过代运营快速建立市场连接，
+                再通过孵化让电商运营能力沉淀于企业内部，最终实现从&#34;借船出海&#34;到&#34;造船远航&#34;的跨越。
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Action Plan -->
+      <section id="action-plan" class="section-padding bg-slate-50">
+        <div class="max-w-6xl mx-auto">
+          <div class="text-center mb-16">
+            <h2 class="text-4xl font-serif font-bold text-primary mb-6">总结与行动倡议</h2>
+            <p class="text-xl text-secondary max-w-3xl mx-auto">
+              我们为您设计的，不是一份简单的代运营合同，而是一张清晰的、可执行的&#34;品牌出海能力建设路线图&#34;
+            </p>
+          </div>
+
+          <!-- Action Steps -->
+          <div class="grid md:grid-cols-4 gap-6 mb-12">
+            <div class="stage-card rounded-xl p-6 text-center">
+              <div class="w-16 h-16 bg-blue-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span class="text-2xl font-bold text-white">1</span>
+              </div>
+              <h3 class="text-lg font-semibold mb-2">第一步：验证</h3>
+              <div class="text-2xl font-bold text-blue-600 mb-2">4,500元</div>
+              <p class="text-sm text-secondary">投入一个月，验证产品市场潜力</p>
+            </div>
+
+            <div class="stage-card rounded-xl p-6 text-center">
+              <div class="w-16 h-16 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span class="text-2xl font-bold text-white">2</span>
+              </div>
+              <h3 class="text-lg font-semibold mb-2">第二步：深化</h3>
+              <div class="text-2xl font-bold text-green-600 mb-2">19,800元</div>
+              <p class="text-sm text-secondary">季度规模合作，批量获取客户</p>
+            </div>
+
+            <div class="stage-card rounded-xl p-6 text-center">
+              <div class="w-16 h-16 bg-yellow-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span class="text-2xl font-bold text-white">3</span>
+              </div>
+              <h3 class="text-lg font-semibold mb-2">第三步：赋能</h3>
+              <p class="text-sm text-secondary mb-2">并肩作战</p>
+              <p class="text-sm text-secondary">赋能完整电商能力</p>
+            </div>
+
+            <div class="stage-card rounded-xl p-6 text-center">
+              <div class="w-16 h-16 bg-purple-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span class="text-2xl font-bold text-white">4</span>
+              </div>
+              <h3 class="text-lg font-semibold mb-2">第四步：协同</h3>
+              <p class="text-sm text-secondary mb-2">长期伙伴</p>
+              <p class="text-sm text-secondary">助力品牌深深扎根</p>
+            </div>
+          </div>
+
+          <!-- Commitment -->
+          <div class="bg-white rounded-2xl p-8 text-center">
+            <div class="max-w-4xl mx-auto">
+              <h3 class="text-2xl font-semibold mb-6">我们的承诺</h3>
+              <p class="text-lg text-secondary leading-relaxed mb-8">
+                我们深信，最好的合作是共同成长。让我们从第一步开始，开启这段旅程。
+              </p>
+
+              <div class="bg-gradient-to-r from-blue-50 to-purple-50 rounded-lg p-6">
+                <div class="flex items-center justify-center space-x-4 mb-4">
+                  <i class="fas fa-handshake text-2xl text-blue-600"></i>
+                  <h4 class="text-xl font-semibold">广州哈蜜瓜网络科技有限公司</h4>
+                </div>
+                <div class="space-y-2 text-secondary">
+                  <div class="flex items-center justify-center space-x-2">
+                    <i class="fas fa-user-tie"></i>
+                    <span>郑艺志</span>
+                  </div>
+                  <div class="flex items-center justify-center space-x-2">
+                    <i class="fas fa-phone"></i>
+                    <span>15902027545</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script>
+        // Initialize Mermaid with enhanced theme for better contrast
+        mermaid.initialize({
+            startOnLoad: true,
+            theme: 'base',
+            themeVariables: {
+                primaryColor: '#ffffff',
+                primaryTextColor: '#1e293b',
+                primaryBorderColor: '#1e293b',
+                lineColor: '#475569',
+                secondaryColor: '#f8fafc',
+                tertiaryColor: '#ffffff',
+                background: '#ffffff',
+                mainBkg: '#ffffff',
+                secondBkg: '#f8fafc',
+                tertiaryBkg: '#ffffff',
+                fontFamily: 'Inter, sans-serif',
+                fontSize: '14px'
+            },
+            flowchart: {
+                useMaxWidth: false,
+                htmlLabels: true,
+                curve: 'basis',
+                padding: 20
+            }
+        });
+
+        // Initialize Mermaid Controls for zoom and pan
+        function initializeMermaidControls() {
+            const containers = document.querySelectorAll('.mermaid-container');
+
+            containers.forEach(container => {
+            const mermaidElement = container.querySelector('.mermaid');
+            let scale = 1;
+            let isDragging = false;
+            let startX, startY, translateX = 0, translateY = 0;
+
+            // 触摸相关状态
+            let isTouch = false;
+            let touchStartTime = 0;
+            let initialDistance = 0;
+            let initialScale = 1;
+            let isPinching = false;
+
+            // Zoom controls
+            const zoomInBtn = container.querySelector('.zoom-in');
+            const zoomOutBtn = container.querySelector('.zoom-out');
+            const resetBtn = container.querySelector('.reset-zoom');
+            const fullscreenBtn = container.querySelector('.fullscreen');
+
+            function updateTransform() {
+                mermaidElement.style.transform = `translate(${translateX}px, ${translateY}px) scale(${scale})`;
+
+                if (scale > 1) {
+                container.classList.add('zoomed');
+                } else {
+                container.classList.remove('zoomed');
+                }
+
+                mermaidElement.style.cursor = isDragging ? 'grabbing' : 'grab';
+            }
+
+            if (zoomInBtn) {
+                zoomInBtn.addEventListener('click', () => {
+                scale = Math.min(scale * 1.25, 4);
+                updateTransform();
+                });
+            }
+
+            if (zoomOutBtn) {
+                zoomOutBtn.addEventListener('click', () => {
+                scale = Math.max(scale / 1.25, 0.3);
+                if (scale <= 1) {
+                    translateX = 0;
+                    translateY = 0;
+                }
+                updateTransform();
+                });
+            }
+
+            if (resetBtn) {
+                resetBtn.addEventListener('click', () => {
+                scale = 1;
+                translateX = 0;
+                translateY = 0;
+                updateTransform();
+                });
+            }
+
+            if (fullscreenBtn) {
+                fullscreenBtn.addEventListener('click', () => {
+                if (container.requestFullscreen) {
+                    container.requestFullscreen();
+                } else if (container.webkitRequestFullscreen) {
+                    container.webkitRequestFullscreen();
+                } else if (container.msRequestFullscreen) {
+                    container.msRequestFullscreen();
+                }
+                });
+            }
+
+            // Mouse Events
+            mermaidElement.addEventListener('mousedown', (e) => {
+                if (isTouch) return; // 如果是触摸设备，忽略鼠标事件
+
+                isDragging = true;
+                startX = e.clientX - translateX;
+                startY = e.clientY - translateY;
+                mermaidElement.style.cursor = 'grabbing';
+                updateTransform();
+                e.preventDefault();
+            });
+
+            document.addEventListener('mousemove', (e) => {
+                if (isDragging && !isTouch) {
+                translateX = e.clientX - startX;
+                translateY = e.clientY - startY;
+                updateTransform();
+                }
+            });
+
+            document.addEventListener('mouseup', () => {
+                if (isDragging && !isTouch) {
+                isDragging = false;
+                mermaidElement.style.cursor = 'grab';
+                updateTransform();
+                }
+            });
+
+            document.addEventListener('mouseleave', () => {
+                if (isDragging && !isTouch) {
+                isDragging = false;
+                mermaidElement.style.cursor = 'grab';
+                updateTransform();
+                }
+            });
+
+            // 获取两点之间的距离
+            function getTouchDistance(touch1, touch2) {
+                return Math.hypot(
+                touch2.clientX - touch1.clientX,
+                touch2.clientY - touch1.clientY
+                );
+            }
+
+            // Touch Events - 触摸事件处理
+            mermaidElement.addEventListener('touchstart', (e) => {
+                isTouch = true;
+                touchStartTime = Date.now();
+
+                if (e.touches.length === 1) {
+                // 单指拖动
+                isPinching = false;
+                isDragging = true;
+
+                const touch = e.touches[0];
+                startX = touch.clientX - translateX;
+                startY = touch.clientY - translateY;
+
+                } else if (e.touches.length === 2) {
+                // 双指缩放
+                isPinching = true;
+                isDragging = false;
+
+                const touch1 = e.touches[0];
+                const touch2 = e.touches[1];
+                initialDistance = getTouchDistance(touch1, touch2);
+                initialScale = scale;
+                }
+
+                e.preventDefault();
+            }, { passive: false });
+
+            mermaidElement.addEventListener('touchmove', (e) => {
+                if (e.touches.length === 1 && isDragging && !isPinching) {
+                // 单指拖动
+                const touch = e.touches[0];
+                translateX = touch.clientX - startX;
+                translateY = touch.clientY - startY;
+                updateTransform();
+
+                } else if (e.touches.length === 2 && isPinching) {
+                // 双指缩放
+                const touch1 = e.touches[0];
+                const touch2 = e.touches[1];
+                const currentDistance = getTouchDistance(touch1, touch2);
+
+                if (initialDistance > 0) {
+                    const newScale = Math.min(Math.max(
+                    initialScale * (currentDistance / initialDistance),
+                    0.3
+                    ), 4);
+                    scale = newScale;
+                    updateTransform();
+                }
+                }
+
+                e.preventDefault();
+            }, { passive: false });
+
+            mermaidElement.addEventListener('touchend', (e) => {
+                // 重置状态
+                if (e.touches.length === 0) {
+                isDragging = false;
+                isPinching = false;
+                initialDistance = 0;
+
+                // 延迟重置isTouch，避免鼠标事件立即触发
+                setTimeout(() => {
+                    isTouch = false;
+                }, 100);
+                } else if (e.touches.length === 1 && isPinching) {
+                // 从双指变为单指，切换为拖动模式
+                isPinching = false;
+                isDragging = true;
+
+                const touch = e.touches[0];
+                startX = touch.clientX - translateX;
+                startY = touch.clientY - translateY;
+                }
+
+                updateTransform();
+            });
+
+            mermaidElement.addEventListener('touchcancel', (e) => {
+                isDragging = false;
+                isPinching = false;
+                initialDistance = 0;
+
+                setTimeout(() => {
+                isTouch = false;
+                }, 100);
+
+                updateTransform();
+            });
+
+            // Enhanced wheel zoom with better center point handling
+            container.addEventListener('wheel', (e) => {
+                e.preventDefault();
+                const rect = container.getBoundingClientRect();
+                const centerX = rect.width / 2;
+                const centerY = rect.height / 2;
+
+                const delta = e.deltaY > 0 ? 0.9 : 1.1;
+                const newScale = Math.min(Math.max(scale * delta, 0.3), 4);
+
+                // Adjust translation to zoom towards center
+                if (newScale !== scale) {
+                const scaleDiff = newScale / scale;
+                translateX = translateX * scaleDiff;
+                translateY = translateY * scaleDiff;
+                scale = newScale;
+
+                if (scale <= 1) {
+                    translateX = 0;
+                    translateY = 0;
+                }
+
+                updateTransform();
+                }
+            });
+
+            // Initialize display
+            updateTransform();
+            });
+        }
+
+        // Initialize mermaid controls on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            initializeMermaidControls();
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('.toc-link').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href').substring(1);
+                const targetElement = document.getElementById(targetId);
+                
+                if (targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+                
+                // Update active link
+                document.querySelectorAll('.toc-link').forEach(l => l.classList.remove('active'));
+                this.classList.add('active');
+            });
+        });
+
+        // Update active link on scroll
+        window.addEventListener('scroll', function() {
+            const sections = document.querySelectorAll('section[id]');
+            const scrollPos = window.scrollY + 100;
+
+            sections.forEach(section => {
+                const top = section.offsetTop;
+                const bottom = top + section.offsetHeight;
+                const id = section.getAttribute('id');
+                
+                if (scrollPos >= top && scrollPos <= bottom) {
+                    document.querySelectorAll('.toc-link').forEach(link => {
+                        link.classList.remove('active');
+                        if (link.getAttribute('href') === `#${id}`) {
+                            link.classList.add('active');
+                        }
+                    });
+                }
+            });
+        });
+
+        // Mobile menu toggle (if needed)
+        function toggleMobileMenu() {
+            const sidebar = document.querySelector('.toc-sidebar');
+            sidebar.classList.toggle('open');
+        }
+
+        // Add mobile menu button for smaller screens
+        if (window.innerWidth <= 1024) {
+            const menuButton = document.createElement('button');
+            menuButton.innerHTML = '<i class="fas fa-bars"></i>';
+            menuButton.className = 'fixed top-4 left-4 z-50 bg-white p-3 rounded-lg shadow-lg lg:hidden';
+            menuButton.onclick = toggleMobileMenu;
+            document.body.appendChild(menuButton);
+        }
+
+        // Close sidebar when clicking outside on mobile
+        document.addEventListener('click', function(event) {
+            const sidebar = document.querySelector('.toc-sidebar');
+            const menuButton = document.querySelector('button[onclick="toggleMobileMenu()"]');
+            
+            if (window.innerWidth <= 1024 && 
+                sidebar.classList.contains('open') && 
+                !sidebar.contains(event.target) && 
+                event.target !== menuButton && 
+                !menuButton.contains(event.target)) {
+                sidebar.classList.remove('open');
+            }
+        });
+    </script>
+  
+
+</body></html>
